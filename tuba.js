@@ -53,8 +53,11 @@ var fuelFieldset = document.getElementsByTagName("fieldset")[3];
 function verifyCrops() {
     //the try runs the for function and checks to see if any checkboxes are checked and if none are it throws a error message
     try { for (var i = 0; i < 7; i++) {
-        if (cropsFieldset.getElementsByTagName("input")[i]. checked) { cropscomplete = true; messageElement.innerHTML = ""; // clear previous message or recommendation
-        testFormCompleteness(); i=8;
+        if (cropsFieldset.getElementsByTagName("input")[i].checked) {
+         cropsComplete = true; messageElement.innerHTML = ""; 
+         // clear previous message or recommendation
+        testFormCompleteness();
+         i=8;
             }
         } 
         if (i === 7) {
@@ -65,7 +68,7 @@ function verifyCrops() {
         catch(message) { 
             cropsComplete = false; messageHeadElement.innerHTML = ""; // remove any former recommendation heading 
             messageElement.innerHTML = message; // display error
-            Message
+            message
             }
             
 
